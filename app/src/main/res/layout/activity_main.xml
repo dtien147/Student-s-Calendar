@@ -1,0 +1,107 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}"
+    android:paddingTop="5dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <ImageView
+                android:layout_width="@dimen/imageButtonSize"
+                android:layout_height="@dimen/imageButtonSize"
+                android:id="@+id/settingsButton"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/settings"
+                android:clickable="true"
+                android:onClick="showPopUpMenu" />
+
+            <TextView
+                android:id="@+id/monthText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/theme" />
+
+            <ImageView
+                android:layout_width="@dimen/imageButtonSize"
+                android:layout_height="@dimen/imageButtonSize"
+                android:id="@+id/addEventButton"
+                android:layout_alignParentTop="false"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="false"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:onClick="addEvent"
+                android:src="@drawable/add" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/weekdays"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/weekdays"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <GridView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/calendarView"
+            android:numColumns="7"
+            android:paddingLeft="0dp"
+            android:verticalSpacing="1dp"
+            android:background="@color/disabled"
+            android:paddingTop="1dp" />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/eventsView" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom">
+
+        <ImageView
+            android:layout_width="@dimen/imageButtonSize2"
+            android:layout_height="@dimen/imageButtonSize2"
+            android:id="@+id/todayView"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:onClick="showToday"
+            android:src="@drawable/today" />
+
+        <ImageView
+            android:layout_width="@dimen/imageButtonSize2"
+            android:layout_height="@dimen/imageButtonSize2"
+            android:id="@+id/upcomingEventsView"
+            android:src="@drawable/upcomingevents"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:onClick="showUpcoming" />
+
+    </LinearLayout>
+
+</FrameLayout>

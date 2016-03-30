@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#000</color>
+    <color name="highlightText">#4EABE6</color>
+    <color name="theme">#26A69A</color>
+    <color name="daySelected">#CEFFFB</color>
+    <color name="disabled">#D7D7D7</color>
+    <color name="calendarViewBackground">#fff</color>
+    <color name="high">#FFFF0000</color>
+    <color name="normal">#000</color>
+    <color name="low">#FF5B5B5B</color>
+    <color name="eventsNumberBackground">#26A69A</color>
+    <color name="eventsNumberText">#fff</color>
+</resources>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="hcmus.studentscalendar.LogIn">
+
+<WebView
+    android:id="@+id/webview"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:visibility="gone">
+</WebView>
+
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/theme"
+    android:id="@+id/linearLayout2">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Khoa CNTT - Trường ĐH KHTN HCM"
+        android:id="@+id/lbAddress"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#fff"
+        android:typeface="sans"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp" />
+
+    <ImageView
+        android:layout_width="@dimen/logoSize"
+        android:layout_height="@dimen/logoSize"
+        android:id="@+id/imageView3"
+        android:src="@drawable/logo"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="STUDENT&apos;S CALENDAR"
+        android:id="@+id/lbAppName"
+        android:textColor="#fff"
+        android:layout_gravity="center_horizontal"
+        android:textSize="@dimen/appNameSize"
+        android:typeface="normal"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp" />
+
+</LinearLayout>
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:contextClickable="false"
+    android:background="@color/disabled"
+    android:layout_gravity="center"
+    android:layout_marginBottom="30dp"
+    android:padding="10dp"
+    android:id="@+id/logInInfo"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Username"
+        android:paddingLeft="5dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/userET"
+        android:background="@android:drawable/editbox_background"
+        android:inputType="textNoSuggestions" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Password"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textNoSuggestions|textPassword"
+        android:ems="10"
+        android:id="@+id/passET"
+        android:background="@android:drawable/editbox_background" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="10dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  Log in later  "
+            android:layout_gravity="right"
+            android:onClick="later"
+            android:background="@color/theme"
+            android:textColor="#fff" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Log in"
+            android:onClick="logIn"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:background="@color/theme"
+            android:textColor="#fff" />
+    </RelativeLayout>
+
+</LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Invalid login, please try again"
+        android:id="@+id/invalidLogin"
+        android:layout_above="@+id/logInInfo"
+        android:layout_alignLeft="@+id/logInInfo"
+        android:layout_alignStart="@+id/logInInfo"
+        android:textColor="@color/high"
+        android:visibility="gone" />
+
+</RelativeLayout>

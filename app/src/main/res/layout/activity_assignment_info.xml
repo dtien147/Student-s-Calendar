@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="hcmus.studentscalendar.AssignmentInfo"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/addEventTitle">
+
+        <ImageView
+            android:layout_width="@dimen/imageButtonSize"
+            android:layout_height="@dimen/imageButtonSize"
+            android:id="@+id/assignmentInfoCancle"
+            android:onClick="cancel"
+            android:src="@drawable/back"
+            android:clickable="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_toEndOf="@+id/assignmentInfoCancle"
+            android:layout_toRightOf="@+id/assignmentInfoCancle"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Assignment"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/theme"
+            android:id="@+id/textView" />
+
+        <ImageView
+            android:id="@+id/assignmentInfoSave"
+            android:layout_width="@dimen/imageButtonSize"
+            android:layout_height="@dimen/imageButtonSize"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:onClick="save"
+            android:clickable="true"
+            android:src="@drawable/accept" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:layout_width="@dimen/imageButtonSize"
+                    android:layout_height="@dimen/imageButtonSize"
+                    android:id="@+id/assignmentInfoIcon"
+                    android:layout_gravity="center_vertical" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/assignmentSubject"
+                    android:background="@android:drawable/edit_text"
+                    android:hint="Subject"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:nestedScrollingEnabled="false"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:layout_below="@+id/assignmentInfoSummaryLine"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_weight="1"
+                    android:inputType="textMultiLine" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Summary"
+                    android:id="@+id/assignmentInfoSummary"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:id="@+id/assignmentInfoSummaryLine"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/assignmentInfoSummary"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:editable="false"
+                    android:focusable="false" />
+
+            </RelativeLayout>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/assignmentInfoName"
+                android:background="@android:drawable/edit_text"
+                android:hint="Event Name"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:nestedScrollingEnabled="false"
+                android:enabled="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:inputType="textMultiLine|textCapSentences" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/assignmentInfoDescription"
+                android:background="@android:drawable/edit_text"
+                android:hint="Description"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:inputType="textMultiLine|textNoSuggestions|textCapSentences|textAutoComplete|textAutoCorrect"
+                android:nestedScrollingEnabled="false"
+                android:enabled="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false" />
+
+            <RelativeLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Time"
+                    android:id="@+id/assignmentInfoTime"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:nestedScrollingEnabled="false" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:id="@+id/assignmentInfoTimeLine"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/assignmentInfoTime"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:nestedScrollingEnabled="false" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="From"
+                    android:paddingLeft="10dp"
+                    android:id="@+id/assignmentInfoFrom"
+                    android:layout_below="@+id/assignmentInfoTime" />
+
+                <EditText
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:paddingLeft="10dp"
+                    android:id="@+id/assignmentInfoStartDate"
+                    android:layout_gravity="right"
+                    android:layout_below="@+id/assignmentInfoFrom"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="false"
+                    android:clickable="true"
+                    android:onClick="startDateClick"
+                    android:focusable="false"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:nestedScrollingEnabled="false"
+                    android:enabled="false"
+                    android:focusableInTouchMode="false" />
+
+                <EditText
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:id="@+id/assignmentInfoStartTime"
+                    android:layout_below="@+id/assignmentInfoFrom"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:clickable="true"
+                    android:onClick="startTimeClick"
+                    android:focusable="false"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:nestedScrollingEnabled="false"
+                    android:enabled="false"
+                    android:focusableInTouchMode="false" />
+
+                <EditText
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:paddingLeft="10dp"
+                    android:id="@+id/assignmentInfoEndDate"
+                    android:layout_below="@+id/assignmentInfoTo"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:clickable="true"
+                    android:onClick="endDateClick"
+                    android:focusable="false"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:nestedScrollingEnabled="false"
+                    android:enabled="false"
+                    android:focusableInTouchMode="false" />
+
+                <EditText
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:id="@+id/assignmentInfoEndTime"
+                    android:layout_alignTop="@+id/assignmentInfoEndDate"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:clickable="true"
+                    android:onClick="endTim/eClick"
+                    android:focusable="false"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:nestedScrollingEnabled="false"
+                    android:enabled="false"
+                    android:focusableInTouchMode="false" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="To"
+                    android:paddingLeft="10dp"
+                    android:id="@+id/assignmentInfoTo"
+                    android:layout_below="@+id/assignmentInfoStartDate"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Priority"
+                    android:id="@+id/textView9"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:nestedScrollingEnabled="false" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:id="@+id/editText12"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/textView9"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:nestedScrollingEnabled="false" />
+            </RelativeLayout>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/assignmentInfoPriority"
+                android:background="@drawable/abc_edit_text_material" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:visibility="visible" >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:id="@+id/editText17"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/textView14"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:nestedScrollingEnabled="false" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Reminder"
+                    android:id="@+id/textView14"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:nestedScrollingEnabled="false" />
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/assignReminderSpinner"
+                    android:layout_alignParentLeft="false"
+                    android:visibility="visible"
+                    android:layout_below="@+id/textView14" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="hcmus.studentscalendar.EventInfo"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/addEventTitle">
+
+        <ImageView
+            android:layout_width="@dimen/imageButtonSize"
+            android:layout_height="@dimen/imageButtonSize"
+            android:id="@+id/eventInfoCancle"
+            android:onClick="cancel"
+            android:src="@drawable/back"
+            android:clickable="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_toEndOf="@+id/eventInfoCancle"
+            android:layout_toRightOf="@+id/eventInfoCancle"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Event"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/theme"
+            android:id="@+id/textView" />
+
+        <ImageView
+            android:id="@+id/eventInfoSave"
+            android:layout_width="@dimen/imageButtonSize"
+            android:layout_height="@dimen/imageButtonSize"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:onClick="save"
+            android:clickable="true"
+            android:src="@drawable/accept" />
+
+        <ImageView
+            android:layout_width="@dimen/imageButtonSize"
+            android:layout_height="@dimen/imageButtonSize"
+            android:id="@+id/deleteButton"
+            android:onClick="delete"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/eventInfoSave"
+            android:layout_toStartOf="@+id/eventInfoSave"
+            android:clickable="true"
+            android:src="@drawable/delete"
+            android:nestedScrollingEnabled="false" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Summary"
+                    android:id="@+id/eventInfoSummary"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:id="@+id/eventInfoSummaryLine"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/eventInfoSummary"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:editable="false"
+                    android:focusable="false" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:layout_width="@dimen/imageButtonSize"
+                    android:layout_height="@dimen/imageButtonSize"
+                    android:id="@+id/eventInfoIcon"
+                    android:layout_gravity="center_vertical" />
+
+                <Spinner
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/eventInfoType"
+                    android:background="@android:drawable/btn_dropdown" />
+            </LinearLayout>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/eventInfoName"
+                android:background="@android:drawable/edit_text"
+                android:hint="Event Name"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:inputType="textMultiLine|textNoSuggestions|textCapSentences" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/eventInfoDescription"
+                android:background="@android:drawable/edit_text"
+                android:hint="Description"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:inputType="textMultiLine|textNoSuggestions|textCapSentences" />
+
+            <RelativeLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Time"
+                    android:id="@+id/eventInfoTime"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:id="@+id/eventInfoTimeLine"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/eventInfoTime"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:editable="false"
+                    android:focusable="false"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="From"
+                    android:paddingLeft="10dp"
+                    android:layout_below="@+id/eventInfoAllDay"
+                    android:id="@+id/eventInfoFrom" />
+
+                <EditText
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:paddingLeft="10dp"
+                    android:id="@+id/eventInfoStartDate"
+                    android:layout_gravity="right"
+                    android:layout_below="@+id/eventInfoFrom"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="false"
+                    android:clickable="true"
+                    android:onClick="startDateClick"
+                    android:focusable="false"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                <EditText
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:id="@+id/eventInfoStartTime"
+                    android:layout_below="@+id/eventInfoFrom"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:clickable="true"
+                    android:onClick="startTimeClick"
+                    android:focusable="false"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                <EditText
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:paddingLeft="10dp"
+                    android:id="@+id/eventInfoEndDate"
+                    android:layout_below="@+id/eventInfoTo"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:clickable="true"
+                    android:onClick="endDateClick"
+                    android:focusable="false"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                <EditText
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:id="@+id/eventInfoEndTime"
+                    android:layout_alignTop="@+id/eventInfoEndDate"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:clickable="true"
+                    android:onClick="endTim/eClick"
+                    android:focusable="false"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="To"
+                    android:paddingLeft="10dp"
+                    android:id="@+id/eventInfoTo"
+                    android:layout_below="@+id/eventInfoStartDate"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="All day"
+                    android:id="@+id/eventInfoAllDay"
+                    android:checked="false"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="false"
+                    android:layout_below="@+id/eventInfoTime"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Priority"
+                    android:id="@+id/textView10"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:nestedScrollingEnabled="false" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:id="@+id/editText13"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/textView10"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:nestedScrollingEnabled="false" />
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/eventInfoPriority"
+                    android:layout_below="@+id/textView10"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:visibility="visible" >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:id="@+id/editText14"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/textView11"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:nestedScrollingEnabled="false" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Reminder"
+                    android:id="@+id/textView11"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:nestedScrollingEnabled="false" />
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/infoReminderSpinner"
+                    android:layout_alignParentLeft="false"
+                    android:visibility="visible"
+                    android:layout_below="@+id/textView11" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

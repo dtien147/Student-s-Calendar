@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:background="#fff">
+
+
+    <TextView
+        android:layout_width="@dimen/dayCellWidth"
+        android:layout_height="@dimen/dayCellHeight"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/day"
+        android:textAlignment="center"
+        android:autoText="false"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="23"
+        android:textColor="#000" />
+
+    <TextView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/eventNumber"
+        android:background="@drawable/textview_circle"
+        android:gravity="center_vertical|center_horizontal"
+        android:textSize="8dp"
+        android:textColor="@color/eventsNumberText"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp" />
+
+</FrameLayout>

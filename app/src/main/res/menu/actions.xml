@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/sync"
+        android:title="Sync"/>
+
+    <item
+        android:id="@+id/settings"
+        android:title="Settings"/>
+
+    <item
+        android:id="@+id/search"
+        android:title="Search"/>
+
+    <item
+        android:id="@+id/account"
+        android:title="Account"/>
+
+    <item
+        android:id="@+id/sort"
+        android:title="Sort">
+
+        <menu>
+            <item
+                android:id="@+id/sortByTime"
+                android:title="By time"/>
+
+            <item
+                android:id="@+id/sortByPriority"
+                android:title="By priority"/>
+
+        </menu>
+
+    </item>
+</menu>

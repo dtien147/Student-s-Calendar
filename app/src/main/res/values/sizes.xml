@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dayCellWidth">55dp</dimen>
+    <dimen name="dayCellHeight">45dp</dimen>
+    <dimen name="imageButtonSize">50dp</dimen>
+    <dimen name="settingItem">50dp</dimen>
+    <dimen name="seperator">20dp</dimen>
+    <dimen name="categorySeperator">30dp</dimen>
+    <dimen name="logoSize">200dp</dimen>
+    <dimen name="appNameSize">30sp</dimen>
+    <dimen name="imageButtonSize2">60dp</dimen>
+    <dimen name="passwordButton">80dp</dimen>
+    <dimen name="passwordSize">30sp</dimen>
+</resources>
